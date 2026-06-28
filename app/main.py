@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from database import engine, Base
-
 from routers import company, job
+
+from models import company as company_model, job as job_model
 
 app = FastAPI()
 print(engine)
@@ -9,6 +10,7 @@ print(engine)
 Base.metadata.create_all(bind = engine)
 app.include_router(company.router)
 app.include_router(job.router)
+
 @app.get("/")
 def read_root():
     return {"Hello":"World"}

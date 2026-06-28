@@ -13,3 +13,6 @@ class CompanyUpdate(CompanyBase):
     name: Optional[str] = None
     email: Optional[str] = None
     phone: Optional[str] = None
+
+class CompanyResponse(CompanyBase):
+    pass
