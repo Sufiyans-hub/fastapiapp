@@ -15,5 +15,9 @@ class JobUpdate(BaseModel):
     description: Optional[str] = None
     company_id:Optional[str] = None
 
+class JobResponse(JobBase):
+    id:int
+    company_id:int
+
 class JobUpdate(JobBase):
     salary:Optional[int]
