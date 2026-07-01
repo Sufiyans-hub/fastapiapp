@@ -1,9 +1,8 @@
-interface Company{
+interface Job{
     id:number;
-    name:string;
-    email:string;
-    phone:string;
-    location:string;
-    jobs:job[];
+    title:string;
+    description:string;
+    salary:string;
+    company_id:number;
 }
-export type {Company}
+export type {Job}
